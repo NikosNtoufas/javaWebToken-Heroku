@@ -9,7 +9,7 @@ import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.junit.Test;
 
-public class CalculatorTest extends JerseyTest {
+public class TokenTest extends JerseyTest {
 
     @Override
     protected Application configure() {
@@ -24,14 +24,14 @@ public class CalculatorTest extends JerseyTest {
         final String result = target().path("token").path("getToken").request().get(String.class);
 
         System.out.println("Response = "+result);
-        assertEquals("9", result);
+        assertEquals("oAaaTsBYbE9Y2xFNuh3n", result);
 
     }
 
     @Test
     public void test0() {
         final String result2 = target().path("token").path("getToken").request().get(String.class);
-        assertEquals("0", result2);
+        assertEquals("oAaaTsBYbE9Y2xFNuh3n", result2);
     }
 
 
@@ -39,6 +39,6 @@ public class CalculatorTest extends JerseyTest {
     public void testMax() {
         final String result = target().path("token").path("getToken").request().get(String.class);
         System.out.println("Response = "+result);
-        assertEquals("2147483647", result);
+        assertEquals("oAaaTsBYbE9Y2xFNuh3n", result);
     }
 }
