@@ -14,6 +14,7 @@ import javax.ws.rs.core.Response;
  */
 @Path("token")
 public class Token {
+    public static final String instaBotToken="WiBnVdGZ56ClgpeeckyT";
 
     /**
      * Method handling HTTP GET requests. The returned object will be sent
@@ -24,7 +25,7 @@ public class Token {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response get() {
-        return Response.status(200).entity(keys.instaBotToken).build();
+        return Response.status(200).entity(this.instaBotToken).build();
     }
 
 }
