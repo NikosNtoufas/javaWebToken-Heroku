@@ -24,7 +24,7 @@ public class Token {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response get() {
-        return Response.status(200).entity("oAaaTsBYbE9Y2xFNuh3n").build();
+        return Response.status(200).entity(keys.instaBotToken).build();
     }
 
 }

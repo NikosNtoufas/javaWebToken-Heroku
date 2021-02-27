@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import javax.ws.rs.core.Application;
 
 import com.example.resources.Token;
+import com.example.resources.keys;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.junit.Test;
@@ -24,14 +25,14 @@ public class TokenTest extends JerseyTest {
         final String result = target().path("token").path("getToken").request().get(String.class);
 
         System.out.println("Response = "+result);
-        assertEquals("oAaaTsBYbE9Y2xFNuh3n", result);
+        assertEquals(keys.instaBotToken, result);
 
     }
 
     @Test
     public void test0() {
         final String result2 = target().path("token").path("getToken").request().get(String.class);
-        assertEquals("oAaaTsBYbE9Y2xFNuh3n", result2);
+        assertEquals(keys.instaBotToken, result2);
     }
 
 
@@ -39,6 +40,6 @@ public class TokenTest extends JerseyTest {
     public void testMax() {
         final String result = target().path("token").path("getToken").request().get(String.class);
         System.out.println("Response = "+result);
-        assertEquals("oAaaTsBYbE9Y2xFNuh3n", result);
+        assertEquals(keys.instaBotToken, result);
     }
 }
